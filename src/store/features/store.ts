@@ -1,6 +1,7 @@
 import  { PersonSlice } from "./personSlice";
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook,useDispatch,useSelector } from "react-redux";
+import { ProductSlice } from "./productSlice";
 
 // by the help of configure store  we create a store 
 export const store = configureStore({
@@ -8,7 +9,8 @@ export const store = configureStore({
     reducer:{
         // here person is a slice name
         // PersonSLice.reducer have used by importing
-        person: PersonSlice.reducer
+        person: PersonSlice.reducer,
+        product: ProductSlice.reducer
     }
 });
 

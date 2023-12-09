@@ -2,7 +2,7 @@ import React from 'react'
 import { useAppSelector } from '../store/features/store'
 
 export const List = () => {
-    // example of accessing data using useSelector
+
     const person = useAppSelector((state)=>state.person.persons);
 
   return (
