@@ -1,0 +1,3 @@
+//npm cmd to install redux and toolkit
+step 1 :npm install react-redux @reduxjs/toolkit
+        
