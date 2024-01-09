@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* importing google font */
+@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+*{
+  font-family: 'Tinos', serif;
+}
