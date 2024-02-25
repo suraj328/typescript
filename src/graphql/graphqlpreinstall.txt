@@ -1,0 +1,4 @@
+npm install @graphql-tools/merge
+npm install @graphql-tools/load-files
+npm install @graphql-tools/load-files
+npm install path

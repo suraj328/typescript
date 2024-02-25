@@ -1,0 +1,19 @@
+// for insertion
+// mutation {
+//     createUser(username: "john_doe", email: "john_doe@example.com") {
+//       id
+//       username
+//       email
+//     }
+//   }
+
+// for fetching
+// {
+//   systemUsers {
+//      id
+//     username
+//     email
+//     createdAt
+//     updatedAt
+//   }
+// }

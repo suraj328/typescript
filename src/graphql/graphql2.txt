@@ -1,0 +1,21 @@
+import { ApolloServer } from 'apollo-server-express';
+import express from 'express';
+import { mergeResolvers, mergeTypeDefs } from '@graphql-tools/merge';
+import { loadFilesSync } from '@graphql-tools/load-files';
+import path from 'path';
+
+const app = express();
+
+const typeDefs = mergeTypeDefs(loadFilesSync(path.join(__dirname, './schema')));
+const resolversArray = loadFilesSync(path.join(__dirname, './resolvers'));
+const resolvers = mergeResolvers(resolversArray);
+
+const server = new ApolloServer({ typeDefs, resolvers });
+
+server.applyMiddleware({ app });
+
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
