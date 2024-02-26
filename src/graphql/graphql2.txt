@@ -19,3 +19,13 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+if (result === null) {
+        throw new GraphQLError("No data found", {
+          extensions: {
+            code: "404",
+            argumentName: "id",
+          },
+        });
+      }
+//refresh access token

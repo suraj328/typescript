@@ -1,5 +1,4 @@
 import { gql } from "apollo-server-express";
-// import { CustomResponse } from "../../interface/graphql/graphQLResponse";
 const typeDefs = gql`
   type SystemUser {
     id: ID!

@@ -1,5 +1,6 @@
 import { ContextType } from "../../interface/graphqlcontext";
 import { systemRoleService } from "../../service/SystemRoleService";
+import { GraphQLError } from "graphql";
 const resolvers = {
   Query: {
     systemRoles: async (
@@ -15,7 +16,8 @@ const resolvers = {
       { id }: { id: number },
       context: ContextType
     ) => {
-      return await systemRoleService.findByPk(id);
+      const result = await systemRoleService.findByPk(id);
+      return result;
     },
   },
   Mutation: {
