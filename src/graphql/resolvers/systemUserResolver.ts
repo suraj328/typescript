@@ -5,7 +5,7 @@ const resolvers = {
   Query: {
     systemUsers: (_: any, __: any, context: ContextType) => {
       console.log(context);
-      return systemUserService.findAll();
+      return systemUserService.findAll(-1);
     },
   },
   Mutation: {

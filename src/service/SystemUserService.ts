@@ -24,7 +24,8 @@ class SystemUserService extends SystemUserRepository<SystemUserData> {
   protected findByEmail(): SystemUserData {
     throw new Error("Method not implemented.");
   }
-  public async findAll(): Promise<SystemUserData[]> {
+  public async findAll(sort: number): Promise<SystemUserData[]> {
+    const sortType: string = sort === 1 ? "ASC" : "DESC";
     try {
       const users = await SystemUser.findAll();
       const userValues = users.map((user) => user.dataValues);

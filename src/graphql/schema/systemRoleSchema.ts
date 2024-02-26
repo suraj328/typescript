@@ -9,7 +9,11 @@ const typeDefs = gql`
     deletedAt: String
   }
   type Query {
-    systemRoles: [SystemRole!]!
+    systemRoles(sortBy:Int!): [SystemRole!]!
+    systemRolesByPk(id: ID!): SystemRole
+  }
+  type Mutation{
+    createSystemRole(rolename:String):SystemRole!
   }
 `;
 export default typeDefs;

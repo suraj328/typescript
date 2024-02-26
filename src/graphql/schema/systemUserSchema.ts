@@ -1,4 +1,5 @@
 import { gql } from "apollo-server-express";
+// import { CustomResponse } from "../../interface/graphql/graphQLResponse";
 const typeDefs = gql`
   type SystemUser {
     id: ID!
@@ -7,8 +8,9 @@ const typeDefs = gql`
     createdAt: String!
     updatedAt: String!
   }
+
   type Query {
-    systemUsers: [SystemUser!]!
+    systemUsers:[SystemUser!]!
   }
   type Mutation {
     createSystemUser(username: String!, email: String!): SystemUser!
