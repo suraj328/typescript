@@ -1,7 +1,3 @@
-password:
-	private-pem.key:@Pa020152#kontra
-	
-	
 cmd to generate pem-key
 
 	private:openssl genrsa -aes256 -out private-key.pem 2048
