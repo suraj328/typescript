@@ -1,4 +1,4 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 
 const App = () => {
   useEffect(() => {
@@ -19,7 +19,7 @@ const App = () => {
     div.style.top = `${getRandomNumber(window.innerHeight - 100)}px`;
     div.style.left = `${getRandomNumber(window.innerWidth - 100)}px`;
     div.innerHTML =
-      '<div class="animated-text"> kontra is <br/>Under Construction</div>';
+      '<div class="animated-text"> kontra is <br/>Under Construction <br/> Available Soon!!</div>';
     body.appendChild(div);
     setTimeout(() => {
       body.removeChild(div);
@@ -30,12 +30,7 @@ const App = () => {
     return Math.floor(Math.random() * max);
   };
 
-  return (
-    <div
-      className="image"
-    >
-    </div>
-  );
+  return <div className="image"></div>;
 };
 
 export default App;
