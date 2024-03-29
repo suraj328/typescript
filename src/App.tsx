@@ -19,7 +19,7 @@ const App = () => {
     div.style.top = `${getRandomNumber(window.innerHeight - 100)}px`;
     div.style.left = `${getRandomNumber(window.innerWidth - 100)}px`;
     div.innerHTML =
-      '<div class="animated-text"> kontra is <br/>Under Construction <br/> Available Soon!!</div>';
+      '<div class="animated-text">Under Maintenance <br/> Available Soon!!</div>';
     body.appendChild(div);
     setTimeout(() => {
       body.removeChild(div);
