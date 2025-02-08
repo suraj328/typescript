@@ -3,3 +3,4 @@ build
 upload
 *.zip
 *.mp4
+.env
