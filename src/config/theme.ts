@@ -1,16 +1,26 @@
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react";
 
-const config: ThemeConfig = {
-  initialColorMode: "light",
-  useSystemColorMode: true,
-};
-
-const systemTheme = extendTheme({
-  config,
-  colors: {
-    brand: { 100: "#f7c948", 500: "#f59e0b", 900: "#78350f" }
+const customConfig = defineConfig({
+  theme: {
+    tokens: {
+      colors: {
+        brand: {
+          100: { value: "#f7c948" },
+          500: { value: "#f59e0b" },
+          900: { value: "#78350f" },
+        },
+      },
+      fonts: {
+        heading: { value: "Arial, sans-serif" },
+        body: { value: "Roboto, sans-serif" },
+      },
+    },
   },
-  fonts: { heading: "Arial, sans-serif", body: "Roboto, sans-serif" }
+  globalCss: {
+    html: {
+      colorScheme: "light",
+    },
+  },
 });
 
-export default systemTheme;
+export const systemTheme = createSystem(defaultConfig, customConfig);
